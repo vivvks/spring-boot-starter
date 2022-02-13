@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    health:
+      show-details: always
+spring:
+  datasource:
+    username: '{{ .Values.database.username }}'
+    url: '{{ .Values.database.url }}'
+    password: '{{ .Values.database.password }}'
+server:
+  port: '8086'
+
+config:
+  appName: spring-project-starter
+  activeSpringProfiles: default
+  dbUrl: abc
